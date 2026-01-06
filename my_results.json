@@ -1,0 +1,130 @@
+[
+  {
+    "input": "Elon Musk founded SpaceX in 2002.",
+    "entities": [
+      {
+        "entity_group": "PERSON",
+        "score": 0.990053117275238,
+        "word": "elon musk",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "entity_group": "ORG",
+        "score": 0.9893684983253479,
+        "word": "spacex",
+        "start": 18,
+        "end": 24
+      },
+      {
+        "entity_group": "DATE",
+        "score": 0.9921797513961792,
+        "word": "2002",
+        "start": 28,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "input": "The headquarters are located in Hawthorne, California.",
+    "entities": [
+      {
+        "entity_group": "GPE",
+        "score": 0.9913541674613953,
+        "word": "hawthorne",
+        "start": 32,
+        "end": 41
+      },
+      {
+        "entity_group": "GPE",
+        "score": 0.983942985534668,
+        "word": "california",
+        "start": 43,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "input": "NASA awarded a contract to Starship for the Artemis mission.",
+    "entities": [
+      {
+        "entity_group": "ORG",
+        "score": 0.9961612224578857,
+        "word": "nasa",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "entity_group": "PRODUCT",
+        "score": 0.7785612344741821,
+        "word": "starship",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "entity_group": "PRODUCT",
+        "score": 0.9245136380195618,
+        "word": "artemis",
+        "start": 44,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "input": "Mr. Onat bought a brand new Toyota.",
+    "entities": [
+      {
+        "entity_group": "PERSON",
+        "score": 0.9575066566467285,
+        "word": "onat",
+        "start": 4,
+        "end": 8
+      },
+      {
+        "entity_group": "ORG",
+        "score": 0.9785701036453247,
+        "word": "toyota",
+        "start": 28,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "input": "Onat, who is my friend, bought a car.",
+    "entities": [
+      {
+        "entity_group": "PERSON",
+        "score": 0.9932953715324402,
+        "word": "on",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "entity_group": "PERSON",
+        "score": 0.6690075397491455,
+        "word": "##at",
+        "start": 2,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "input": "John has passed his exam and is now a student at MIT.",
+    "entities": [
+      {
+        "entity_group": "PERSON",
+        "score": 0.985858142375946,
+        "word": "john",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "entity_group": "ORG",
+        "score": 0.9924076795578003,
+        "word": "mit",
+        "start": 49,
+        "end": 52
+      }
+    ]
+  }
+]
