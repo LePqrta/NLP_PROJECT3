@@ -56,8 +56,7 @@ def main():
     
     # 6. Load Dataset 2 (Your SpaceX/Custom Data)
     # NOTE: Ensure this file is in the same folder
-    ds2_filename = "combined_training_data.json" 
-    
+    ds2_filename = "dataset2_formatted.json"    
     if os.path.exists(ds2_filename):
         print(f"Found {ds2_filename}...")
         with open(ds2_filename, 'r', encoding='utf-8') as f:

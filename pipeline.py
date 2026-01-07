@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import torch
 from transformers import pipeline
 
 def main(args):
@@ -11,6 +12,20 @@ def main(args):
 
     print(f"Loading model from {args.model_load_path}...")
     
+    # --- INTERACTIVE DEVICE SELECTION ---
+    device = -1  # Default to CPU
+    if torch.cuda.is_available():
+        print(f"\n>> GPU Detected: {torch.cuda.get_device_name(0)}")
+        user_choice = input(">> Do you want to use the GPU? (y/n): ").strip().lower()
+        if user_choice == 'y':
+            device = 0
+            print(">> Using GPU.\n")
+        else:
+            print(">> Using CPU.\n")
+    else:
+        print("\n>> No GPU detected. Using CPU.\n")
+    # ------------------------------------
+
     # 2. Initialize the Pipeline
     # aggregation_strategy="simple" is CRITICAL. 
     # It merges "Elon" and "Musk" into "Elon Musk" (PERSON) automatically.
@@ -19,7 +34,7 @@ def main(args):
         model=args.model_load_path, 
         tokenizer=args.model_load_path, 
         aggregation_strategy="simple",  
-        device=0 # Use GPU (0) if available, otherwise CPU (-1)
+        device=device 
     )
 
     # 3. Read Input Sentences
